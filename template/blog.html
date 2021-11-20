@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <title>Blogs</title>
+</head>
+<body>
+    <div>
+        <ul>
+            {% for i in blogs %}
+                <li>
+                    <h2>
+                        Title:{{i.title}}
+
+                    </h2>
+                    <a href="/blog/{{i.id}}">View blog</a>
+                    <p>
+                        <img src="{{i.image.url}}" width="400px" height="400px" alt="">
+                    </p>
+
+                    <p>Likes: {{i.likes}} Repost:{{i.repost}}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
